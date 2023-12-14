@@ -1,0 +1,209 @@
+:root{
+
+    --color-ppal: #2c3da0;
+
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    
+}
+
+main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#form-container{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    justify-content: center;
+    border: #0597F2 2px solid;
+    box-shadow: 2.5px 2px 1em #05F2DB;
+    border-radius: 10%; 
+    max-width: 25rem;
+    background-color: #0D0D0D;
+    width: 50%;
+    height: 35rem;
+    
+}
+#form{
+    height: 100%;
+    overflow: hidden;
+}
+/* 
+.form{
+    
+} */
+
+#name,#last-name,#document{
+
+    color: white;
+    background-color: #0D0D0D;
+    border: none;
+    border-radius: 0px;
+    transition: ease-in-out .2s  !important;
+    box-shadow: none; 
+}
+
+
+.etiqueta-form{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid white;
+    margin-bottom: .1rem;
+}
+
+.etiqueta-form::after{
+
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -1px;
+   width: 100%;
+   height: 100%;
+   border-bottom: 1px solid #04AFF3;
+   transform: translateX(-100%);
+   transition: all .5s ease;
+}
+
+.label-text{
+    position: absolute;
+    bottom: .2rem;
+    left: 0;
+    transition: all .3s ease;
+    color: #fff;
+    
+
+
+}
+
+#form input:focus + .etiqueta-form .label-text{
+    transform: translateY(-150%);
+    font-size: medium;
+    color: #04AFF3;
+
+}
+#form input:valid + .etiqueta-form .label-text{
+    transform: translateY(-150%);
+    font-size: medium;
+    color: #2ecece;
+}
+
+#form input:focus + .etiqueta-form::after{
+    transform: translate(0%);
+}
+#form input:valid + .etiqueta-form::after{
+    transform: translate(0%);
+}
+
+
+.mb-3{
+    position: relative;
+    margin: 4rem 0;
+}
+
+#btn-pulsa{
+    background-color: #0597F2;
+    margin-top: 2rem;
+    transition: background-color .5s ease;
+}
+#btn-pulsa:hover{
+    background-color: #0A7AA6 !important;
+    border: #0A7AA6 1px solid !important;
+    color: white !important;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url(/Public/img/fondo-espacio.jpg);
+    background-size: cover;   
+}
+
+.navbar{
+    background-color: transparent !important;
+    border-bottom: white 1px solid;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+
+
+@media (max-width: 600px) {
+
+ body{
+
+    font-size: smaller;
+
+ }
+
+ #form-container{
+    margin-top: 1rem;
+    border: #0597F2 2px solid;
+    box-shadow: 2.5px 2px 1em #05F2DB;
+    border-radius: 10%; 
+    max-width: 25rem;
+    background-color: #0D0D0D;
+    width: 50%;
+    height: 75vh;
+    
+ }
+
+ #form{
+    height: 100%;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+
+.mb-3{
+    position: relative;
+    margin: 3rem 0;
+}
+
+#form input:focus + .etiqueta-form .label-text{
+    font-size: small;
+}
+#form input:valid + .etiqueta-form .label-text{
+    font-size: small;
+}
+#img-form{
+    width: 10rem;
+}
+.img-mb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+}
+
+
+
